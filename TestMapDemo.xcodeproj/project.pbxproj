@@ -17,6 +17,7 @@
 		01BEB9D6273D31F0005F6483 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9AC273D31E7005F6483 /* ContentView.swift */; };
 		01BEB9D7273D31F0005F6483 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BEB9AD273D31F0005F6483 /* Assets.xcassets */; };
 		01BEB9D8273D31F0005F6483 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BEB9AD273D31F0005F6483 /* Assets.xcassets */; };
+		01BEB9E9273D34BC005F6483 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9E8273D34BC005F6483 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		01BEB9CB273D31F0005F6483 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BEB9CF273D31F0005F6483 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		01BEB9D1273D31F0005F6483 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		01BEB9E8273D34BC005F6483 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		01BEB9AA273D31E6005F6483 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				01BEB9E7273D3491005F6483 /* View */,
 				01BEB9AB273D31E7005F6483 /* TestMapDemoApp.swift */,
 				01BEB9AC273D31E7005F6483 /* ContentView.swift */,
 				01BEB9AD273D31F0005F6483 /* Assets.xcassets */,
@@ -139,6 +142,14 @@
 				01BEB9D1273D31F0005F6483 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		01BEB9E7273D3491005F6483 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01BEB9E8273D34BC005F6483 /* LoginView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01BEB9E9273D34BC005F6483 /* LoginView.swift in Sources */,
 				01BEB9D5273D31F0005F6483 /* ContentView.swift in Sources */,
 				01BEB9D3273D31F0005F6483 /* TestMapDemoApp.swift in Sources */,
 			);
