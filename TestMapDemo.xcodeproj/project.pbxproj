@@ -18,6 +18,10 @@
 		01BEB9D7273D31F0005F6483 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BEB9AD273D31F0005F6483 /* Assets.xcassets */; };
 		01BEB9D8273D31F0005F6483 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BEB9AD273D31F0005F6483 /* Assets.xcassets */; };
 		01BEB9E9273D34BC005F6483 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9E8273D34BC005F6483 /* LoginView.swift */; };
+		01BEB9EC273D398A005F6483 /* CustomLoadingButton in Frameworks */ = {isa = PBXBuildFile; productRef = 01BEB9EB273D398A005F6483 /* CustomLoadingButton */; };
+		01BEB9EF273D3D36005F6483 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9EE273D3D36005F6483 /* LoginViewModel.swift */; };
+		01BEB9F2273D3DF0005F6483 /* Extentions+Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9F1273D3DF0005F6483 /* Extentions+Modifier.swift */; };
+		01BEB9F4273D4341005F6483 /* OvalTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9F3273D4341005F6483 /* OvalTextFieldStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,9 @@
 		01BEB9CF273D31F0005F6483 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		01BEB9D1273D31F0005F6483 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		01BEB9E8273D34BC005F6483 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		01BEB9EE273D3D36005F6483 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		01BEB9F1273D3DF0005F6483 /* Extentions+Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions+Modifier.swift"; sourceTree = "<group>"; };
+		01BEB9F3273D4341005F6483 /* OvalTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalTextFieldStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01BEB9EC273D398A005F6483 /* CustomLoadingButton in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +107,8 @@
 		01BEB9AA273D31E6005F6483 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				01BEB9F0273D3D7E005F6483 /* Extention+Modifier */,
+				01BEB9ED273D3D24005F6483 /* ViewModel */,
 				01BEB9E7273D3491005F6483 /* View */,
 				01BEB9AB273D31E7005F6483 /* TestMapDemoApp.swift */,
 				01BEB9AC273D31E7005F6483 /* ContentView.swift */,
@@ -152,6 +162,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		01BEB9ED273D3D24005F6483 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				01BEB9EE273D3D36005F6483 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		01BEB9F0273D3D7E005F6483 /* Extention+Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				01BEB9F1273D3DF0005F6483 /* Extentions+Modifier.swift */,
+				01BEB9F3273D4341005F6483 /* OvalTextFieldStyle.swift */,
+			);
+			path = "Extention+Modifier";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,6 +195,9 @@
 			dependencies = (
 			);
 			name = "TestMapDemo (iOS)";
+			packageProductDependencies = (
+				01BEB9EB273D398A005F6483 /* CustomLoadingButton */,
+			);
 			productName = "TestMapDemo (iOS)";
 			productReference = 01BEB9B2273D31F0005F6483 /* TestMapDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -260,6 +290,9 @@
 				Base,
 			);
 			mainGroup = 01BEB9A5273D31E5005F6483;
+			packageReferences = (
+				01BEB9EA273D398A005F6483 /* XCRemoteSwiftPackageReference "CustomLoadingButton" */,
+			);
 			productRefGroup = 01BEB9B3273D31F0005F6483 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -310,9 +343,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01BEB9F2273D3DF0005F6483 /* Extentions+Modifier.swift in Sources */,
+				01BEB9EF273D3D36005F6483 /* LoginViewModel.swift in Sources */,
 				01BEB9E9273D34BC005F6483 /* LoginView.swift in Sources */,
 				01BEB9D5273D31F0005F6483 /* ContentView.swift in Sources */,
 				01BEB9D3273D31F0005F6483 /* TestMapDemoApp.swift in Sources */,
+				01BEB9F4273D4341005F6483 /* OvalTextFieldStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,6 +773,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		01BEB9EA273D398A005F6483 /* XCRemoteSwiftPackageReference "CustomLoadingButton" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tariqul000/CustomLoadingButton.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		01BEB9EB273D398A005F6483 /* CustomLoadingButton */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01BEB9EA273D398A005F6483 /* XCRemoteSwiftPackageReference "CustomLoadingButton" */;
+			productName = CustomLoadingButton;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 01BEB9A6273D31E5005F6483 /* Project object */;
 }
