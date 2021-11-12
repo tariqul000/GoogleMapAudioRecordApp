@@ -8,7 +8,6 @@
 
 import SwiftUI
 import CustomLoadingButton
-import WebKit
 
 struct RegistrationView: View {
     @ObservedObject var viewModel: AuthViewModel
@@ -120,14 +119,11 @@ struct RegistrationView: View {
     func signUp(name: String, email: String, password: String) {
             print("sign me up")
             viewModel.signUp(name: name, email: email, password: password) { (result, error) in
-               // self.loading = false
                 if error != nil {
                     print("\(error)")
-                 //   self.error = true
+                    self.viewModel.showingAlert = true
                 } else {
                     print("success full")
-                   // self.email = ""
-                   //self.password = ""
                 }
             }
         }

@@ -60,7 +60,7 @@ struct LoginView: View {
                 
                 CustomLoadingButton(action: {
                     
-                    
+                 signIn()
                    
                 }, isLoading: $viewModel.isLoading, style: style)
                 {
@@ -87,10 +87,25 @@ struct LoginView: View {
                 }
             NavigationLink(destination: RegistrationView(viewModel: AuthViewModel()), isActive: $viewModel.isShowingRegistration) { EmptyView().navigationBarTitle("")
                           .navigationBarHidden(true) }
-
             
+            NavigationLink(destination: GoogleMapView(), isActive: $viewModel.isLoginSuccessFull) { EmptyView().navigationBarTitle("")
+                          .navigationBarHidden(true) }
+
         } .alert(isPresented: $viewModel.showingAlert) {
             Alert(title: Text("Login status"), message: Text("User name or password not matched, please type correct username, password"), dismissButton: .default(Text("Got it!")))
+        }
+    }
+    
+    func signIn () {
+        viewModel.signIn(email: viewModel.email, password: viewModel.password) { (result, error) in
+            if error != nil {
+                viewModel.showingAlert = true
+            } else {
+                self.viewModel.isLoginSuccessFull = true
+                self.viewModel.email = ""
+                self.viewModel.password = ""
+                
+            }
         }
     }
     
