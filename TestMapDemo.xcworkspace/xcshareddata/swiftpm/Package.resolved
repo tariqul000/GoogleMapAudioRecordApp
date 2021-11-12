@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CustomLoadingButton",
+        "repositoryURL": "https://github.com/tariqul000/CustomLoadingButton.git",
+        "state": {
+          "branch": "main",
+          "revision": "fb7cfaab940c31d0eff8800ce656b4901dbb7125",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
