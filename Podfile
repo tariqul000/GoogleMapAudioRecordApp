@@ -12,6 +12,10 @@ target 'TestMapDemo (iOS)' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Analytics'
   pod 'CodableFirebase'
+  pod 'GoogleMaps', '5.2.0'
+  pod 'GooglePlaces'
+
+
 
 end
 
