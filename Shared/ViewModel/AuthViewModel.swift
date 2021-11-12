@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import Firebase
 
 final class AuthViewModel: ObservableObject {
     
@@ -17,11 +18,58 @@ final class AuthViewModel: ObservableObject {
     @Published var isValidate: Bool = false
     @Published var showingAlert: Bool = false
     @Published var isShowingRegistration: Bool = false
-
-
-
     private var cancleable = Set<AnyCancellable>()
+
     
+    //firebase
+    var didChange = PassthroughSubject<AuthViewModel, Never>()
+    var session: UserModel? { didSet { self.didChange.send(self) }}
+    var handle: AuthStateDidChangeListenerHandle?
+
+    
+    func listen () {
+            // monitor authentication changes using firebase
+            handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+                if let user = user {
+                    // if we have a user, create a new user model
+                    print("GotUser: \(user)")
+                    self.session = UserModel(
+                        uid: user.uid,
+                        displayName: user.displayName, email: user.email                    )
+                } else {
+                    // if we don't have a user, set our session to nil
+                    self.session = nil
+                }
+            }
+        }
+
+    func signUp(
+        name: String,
+        email: String,
+        password: String,
+        handler: @escaping AuthDataResultCallback
+        ) {
+        Auth.auth().createUser(withEmail: email, password: password, completion: handler)
+    }
+
+    func signIn(
+        email: String,
+        password: String,
+        handler: @escaping AuthDataResultCallback
+        ) {
+        Auth.auth().signIn(withEmail: email, password: password, completion: handler)
+    }
+
+    func signOut () -> Bool {
+        do {
+            try Auth.auth().signOut()
+            self.session = nil
+            return true
+        } catch {
+            return false
+        }
+    }
+
     
     func submitLoginRequest() {
         if isEmailValid() && isPasswordValid(){
@@ -45,6 +93,13 @@ final class AuthViewModel: ObservableObject {
         return true
     }
     
+    func isNameValid() -> Bool {
+        if name.isEmpty {
+            return false
+        }
+        return true
+    }
+    
     var emailError: String {
         if isEmailValid() {
             return ""
@@ -53,6 +108,13 @@ final class AuthViewModel: ObservableObject {
         }
     }
     
+    var nameError: String {
+        if isNameValid() {
+            return ""
+        } else {
+            return "Enter a valid anem"
+        }
+    }
     var passwordError: String {
         if isPasswordValid() {
             return ""

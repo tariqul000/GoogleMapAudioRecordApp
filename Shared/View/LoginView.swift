@@ -20,7 +20,8 @@ struct LoginView: View {
         strokeColor: .orange,
         progressType: ProgressType.circleProgress)
     
-    
+   
+
     var body: some View {
         contentBody()
     }

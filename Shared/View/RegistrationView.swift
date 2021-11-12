@@ -8,6 +8,7 @@
 
 import SwiftUI
 import CustomLoadingButton
+import WebKit
 
 struct RegistrationView: View {
     @ObservedObject var viewModel: AuthViewModel
@@ -49,10 +50,11 @@ struct RegistrationView: View {
                         .placeholder(when: viewModel.name.isEmpty) {
                             Text("Name").foregroundColor(Color("light_gray"))}
                     
-                    Text(viewModel.emailError)
+                    Text(viewModel.nameError)
                         .foregroundColor(.red)
                         .titleStyle(fontSize: 10)
                         .padding(.bottom, 20)
+                    
                     Text("E-mail")
                         .foregroundColor(Color("text_color_1"))
                         .titleStyle(fontSize: 20)
@@ -84,13 +86,11 @@ struct RegistrationView: View {
                 }
                 
                 CustomLoadingButton(action: {
-                    
-                    
-                    
+                    signUp(name: viewModel.name, email: viewModel.email, password: viewModel.password)
                 }, isLoading: $viewModel.isLoading, style: style)
                 {
                     HStack{
-                        Text("LogIn")
+                        Text("Create")
                             .foregroundColor(.white)
                             .titleStyle(fontSize: 25)
                     }
@@ -117,5 +117,18 @@ struct RegistrationView: View {
             Alert(title: Text("Login status"), message: Text("User name or password not matched, please type correct username, password"), dismissButton: .default(Text("Got it!")))
         }
     }
-    
+    func signUp(name: String, email: String, password: String) {
+            print("sign me up")
+            viewModel.signUp(name: name, email: email, password: password) { (result, error) in
+               // self.loading = false
+                if error != nil {
+                    print("\(error)")
+                 //   self.error = true
+                } else {
+                    print("success full")
+                   // self.email = ""
+                   //self.password = ""
+                }
+            }
+        }
 }

@@ -8,16 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var viewModel: AuthViewModel
+    
     var body: some View {
-        NavigationView {
-                        LoginView(viewModel: AuthViewModel())
-                    }
-                    .navigationViewStyle(StackNavigationViewStyle())
+        Group {
+            if (viewModel.session != nil) {
+                Text("Hello user!")
+            } else {
+                NavigationView {
+                    LoginView(viewModel: AuthViewModel())
+                }
+                .navigationViewStyle(StackNavigationViewStyle())
+            }
+        }
+        .onAppear(perform: getUser)
+        
+        
+    }
+    func getUser () {
+        viewModel.listen()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: AuthViewModel())
     }
 }
