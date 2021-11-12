@@ -1,14 +1,15 @@
 //
-//  LoginView.swift
+//  RegistrationView.swift
 //  TestMapDemo (iOS)
 //
-//  Created by Md Tariqul Islam on 11/11/21.
+//  Created by Tariqul on 12/11/21.
 //
+
 
 import SwiftUI
 import CustomLoadingButton
 
-struct LoginView: View {
+struct RegistrationView: View {
     @ObservedObject var viewModel: AuthViewModel
     
     var style = LoadingButtonStyle(
@@ -28,13 +29,34 @@ struct LoginView: View {
     private func contentBody() -> some View {
         
         VStack(alignment: .center, spacing: 30){
+            
             Spacer()
-            Text("Welcome Map Test Project")
+            Text("Create New Account")
                 .foregroundColor(Color("text_color_1"))
                 .titleStyle(fontSize: 25)
             
             VStack(alignment: .center, spacing: 10) {
                 VStack(alignment: .leading){
+                    
+                    Text("Name")
+                        .foregroundColor(Color("text_color_1"))
+                        .titleStyle(fontSize: 20)
+                        .padding(.top, 20)
+                    
+                    
+                    TextField("", text: $viewModel.name)
+                        .foregroundColor(.white)
+                        .placeholder(when: viewModel.name.isEmpty) {
+                            Text("Name").foregroundColor(Color("light_gray"))}
+                    
+                    Text(viewModel.emailError)
+                        .foregroundColor(.red)
+                        .titleStyle(fontSize: 10)
+                        .padding(.bottom, 20)
+                    Text("E-mail")
+                        .foregroundColor(Color("text_color_1"))
+                        .titleStyle(fontSize: 20)
+                        .padding(.top, 20)
                     
                     
                     TextField("", text: $viewModel.email)
@@ -46,8 +68,12 @@ struct LoginView: View {
                         .foregroundColor(.red)
                         .titleStyle(fontSize: 10)
                         .padding(.bottom, 20)
-                  
-    
+                    
+                    Text("Password")
+                        .foregroundColor(Color("text_color_1"))
+                        .titleStyle(fontSize: 20)
+                        .padding(.top, 20)
+
                     SecureInputView("Password", text: $viewModel.password)
                     
                     
@@ -60,7 +86,7 @@ struct LoginView: View {
                 CustomLoadingButton(action: {
                     
                     
-                   
+                    
                 }, isLoading: $viewModel.isLoading, style: style)
                 {
                     HStack{
@@ -71,22 +97,21 @@ struct LoginView: View {
                 }
                 
             }.padding([.horizontal], 20)
-            
             Spacer()
+
             HStack{
-            Text("Don’t have an account, yet?")
-                    .foregroundColor(Color("text_color_1"))
-                .titleStyle(fontSize: 14)
-            Text("Create an account")
+                Text("Already have an account?")                .foregroundColor(Color("text_color_1"))
+                    .titleStyle(fontSize: 14)
+                Text("LogIn")
                     .foregroundColor(.orange)
                     .titleStyle(fontSize: 14)
-            } .padding(.bottom, 40)
-              .onTapGesture {
-                  viewModel.isShowingRegistration = true
-                }
-            NavigationLink(destination: RegistrationView(viewModel: AuthViewModel()), isActive: $viewModel.isShowingRegistration) { EmptyView().navigationBarTitle("")
+            } .padding(.top, 40)
+                .onTapGesture {
+                    viewModel.isShowingRegistration = true
+                  }
+            
+            NavigationLink(destination: LoginView(viewModel: AuthViewModel()).navigationBarBackButtonHidden(true), isActive: $viewModel.isShowingRegistration) { EmptyView().navigationBarTitle("")
                           .navigationBarHidden(true) }
-
             
         } .alert(isPresented: $viewModel.showingAlert) {
             Alert(title: Text("Login status"), message: Text("User name or password not matched, please type correct username, password"), dismissButton: .default(Text("Got it!")))

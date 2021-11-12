@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        LoginView(viewModel: LoginViewModel())
+        NavigationView {
+                        LoginView(viewModel: AuthViewModel())
+                    }
+                    .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

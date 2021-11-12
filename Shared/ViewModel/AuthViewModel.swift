@@ -1,5 +1,5 @@
 //
-//  LoginViewModel.swift
+//  AuthViewModel.swift
 //  TestMapDemo (iOS)
 //
 //  Created by Md Tariqul Islam on 11/11/21.
@@ -8,15 +8,15 @@
 import Foundation
 import Combine
 
-final class LoginViewModel: ObservableObject {
+final class AuthViewModel: ObservableObject {
     
-    
+    @Published var name: String = ""
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var isLoading: Bool = false
     @Published var isValidate: Bool = false
     @Published var showingAlert: Bool = false
-    @Published var isShowingHomeView: Bool = false
+    @Published var isShowingRegistration: Bool = false
 
 
 

@@ -19,9 +19,11 @@
 		01BEB9D8273D31F0005F6483 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BEB9AD273D31F0005F6483 /* Assets.xcassets */; };
 		01BEB9E9273D34BC005F6483 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9E8273D34BC005F6483 /* LoginView.swift */; };
 		01BEB9EC273D398A005F6483 /* CustomLoadingButton in Frameworks */ = {isa = PBXBuildFile; productRef = 01BEB9EB273D398A005F6483 /* CustomLoadingButton */; };
-		01BEB9EF273D3D36005F6483 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9EE273D3D36005F6483 /* LoginViewModel.swift */; };
-		01BEB9F2273D3DF0005F6483 /* Extentions+Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9F1273D3DF0005F6483 /* Extentions+Modifier.swift */; };
+		01BEB9EF273D3D36005F6483 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9EE273D3D36005F6483 /* AuthViewModel.swift */; };
 		01BEB9F4273D4341005F6483 /* OvalTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9F3273D4341005F6483 /* OvalTextFieldStyle.swift */; };
+		B87522A4273DE9A200744F44 /* CustomExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87522A3273DE9A200744F44 /* CustomExtention.swift */; };
+		B87522A9273DFD1E00744F44 /* SecureInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87522A8273DFD1E00744F44 /* SecureInputView.swift */; };
+		B87522AB273E072A00744F44 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87522AA273E072A00744F44 /* RegistrationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,13 @@
 			remoteGlobalIDString = 01BEB9B7273D31F0005F6483;
 			remoteInfo = "TestMapDemo (macOS)";
 		};
+		B87522A1273DE85A00744F44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01BEB9A6273D31E5005F6483 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01BEB9B1273D31F0005F6483;
+			remoteInfo = "TestMapDemo (iOS)";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -55,9 +64,11 @@
 		01BEB9CF273D31F0005F6483 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		01BEB9D1273D31F0005F6483 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		01BEB9E8273D34BC005F6483 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		01BEB9EE273D3D36005F6483 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		01BEB9F1273D3DF0005F6483 /* Extentions+Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions+Modifier.swift"; sourceTree = "<group>"; };
+		01BEB9EE273D3D36005F6483 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		01BEB9F3273D4341005F6483 /* OvalTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalTextFieldStyle.swift; sourceTree = "<group>"; };
+		B87522A3273DE9A200744F44 /* CustomExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExtention.swift; sourceTree = "<group>"; };
+		B87522A8273DFD1E00744F44 /* SecureInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureInputView.swift; sourceTree = "<group>"; };
+		B87522AA273E072A00744F44 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +118,7 @@
 		01BEB9AA273D31E6005F6483 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B87522A5273DF03700744F44 /* SubView */,
 				01BEB9F0273D3D7E005F6483 /* Extention+Modifier */,
 				01BEB9ED273D3D24005F6483 /* ViewModel */,
 				01BEB9E7273D3491005F6483 /* View */,
@@ -158,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				01BEB9E8273D34BC005F6483 /* LoginView.swift */,
+				B87522AA273E072A00744F44 /* RegistrationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,7 +178,7 @@
 		01BEB9ED273D3D24005F6483 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				01BEB9EE273D3D36005F6483 /* LoginViewModel.swift */,
+				01BEB9EE273D3D36005F6483 /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -173,10 +186,18 @@
 		01BEB9F0273D3D7E005F6483 /* Extention+Modifier */ = {
 			isa = PBXGroup;
 			children = (
-				01BEB9F1273D3DF0005F6483 /* Extentions+Modifier.swift */,
 				01BEB9F3273D4341005F6483 /* OvalTextFieldStyle.swift */,
+				B87522A3273DE9A200744F44 /* CustomExtention.swift */,
 			);
 			path = "Extention+Modifier";
+			sourceTree = "<group>";
+		};
+		B87522A5273DF03700744F44 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				B87522A8273DFD1E00744F44 /* SecureInputView.swift */,
+			);
+			path = SubView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +270,7 @@
 			);
 			dependencies = (
 				01BEB9CD273D31F0005F6483 /* PBXTargetDependency */,
+				B87522A2273DE85A00744F44 /* PBXTargetDependency */,
 			);
 			name = "Tests macOS";
 			productName = "Tests macOS";
@@ -277,7 +299,7 @@
 					};
 					01BEB9CA273D31F0005F6483 = {
 						CreatedOnToolsVersion = 13.1;
-						TestTargetID = 01BEB9B7273D31F0005F6483;
+						TestTargetID = 01BEB9B1273D31F0005F6483;
 					};
 				};
 			};
@@ -343,12 +365,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01BEB9F2273D3DF0005F6483 /* Extentions+Modifier.swift in Sources */,
-				01BEB9EF273D3D36005F6483 /* LoginViewModel.swift in Sources */,
+				01BEB9EF273D3D36005F6483 /* AuthViewModel.swift in Sources */,
+				B87522A9273DFD1E00744F44 /* SecureInputView.swift in Sources */,
 				01BEB9E9273D34BC005F6483 /* LoginView.swift in Sources */,
 				01BEB9D5273D31F0005F6483 /* ContentView.swift in Sources */,
 				01BEB9D3273D31F0005F6483 /* TestMapDemoApp.swift in Sources */,
 				01BEB9F4273D4341005F6483 /* OvalTextFieldStyle.swift in Sources */,
+				B87522A4273DE9A200744F44 /* CustomExtention.swift in Sources */,
+				B87522AB273E072A00744F44 /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +415,11 @@
 			isa = PBXTargetDependency;
 			target = 01BEB9B7273D31F0005F6483 /* TestMapDemo (macOS) */;
 			targetProxy = 01BEB9CC273D31F0005F6483 /* PBXContainerItemProxy */;
+		};
+		B87522A2273DE85A00744F44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01BEB9B1273D31F0005F6483 /* TestMapDemo (iOS) */;
+			targetProxy = B87522A1273DE85A00744F44 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -513,7 +542,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C6TV7JWFX4;
+				DEVELOPMENT_TEAM = K4FG2YP6BG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -543,7 +572,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C6TV7JWFX4;
+				DEVELOPMENT_TEAM = K4FG2YP6BG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -576,7 +605,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C6TV7JWFX4;
+				DEVELOPMENT_TEAM = K4FG2YP6BG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -604,7 +633,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C6TV7JWFX4;
+				DEVELOPMENT_TEAM = K4FG2YP6BG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -629,7 +658,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C6TV7JWFX4;
+				DEVELOPMENT_TEAM = K4FG2YP6BG;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -654,7 +683,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C6TV7JWFX4;
+				DEVELOPMENT_TEAM = K4FG2YP6BG;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -681,7 +710,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C6TV7JWFX4;
+				DEVELOPMENT_TEAM = K4FG2YP6BG;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -695,7 +724,7 @@
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "TestMapDemo (macOS)";
+				TEST_TARGET_NAME = "TestMapDemo (iOS)";
 			};
 			name = Debug;
 		};
@@ -706,7 +735,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C6TV7JWFX4;
+				DEVELOPMENT_TEAM = K4FG2YP6BG;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -720,7 +749,7 @@
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "TestMapDemo (macOS)";
+				TEST_TARGET_NAME = "TestMapDemo (iOS)";
 			};
 			name = Release;
 		};
