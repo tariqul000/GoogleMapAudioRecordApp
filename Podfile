@@ -9,7 +9,7 @@ target 'TestMapDemo (iOS)' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
-  pod 'Firebase/Firestore'
+#  pod 'Firebase/Firestore'
   pod 'Firebase/Analytics'
   pod 'CodableFirebase'
   pod 'GoogleMaps', '5.2.0'

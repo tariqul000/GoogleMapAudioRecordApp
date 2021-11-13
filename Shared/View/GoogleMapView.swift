@@ -14,14 +14,44 @@ import Foundation
 
 
 struct GoogleMapView: View {
+    @State var labelNumber = 15
+   @ObservedObject var viewModel: AuthViewModel
+
     var body: some View {
+        ZStack(alignment: .bottom){
         GoogMapControllerRepresentable()
+        
+            
+        HStack{
+            Spacer()
+            Image(systemName: "bell").foregroundColor(Color.white)
+                .frame(width: 50, height: 50, alignment: .center)
+                .font(.system(size: 20)).overlay(NotificationNumLabel(digit: $labelNumber))//digit: $labelNumber
+            Spacer()
+            Image("signout")
+                .resizable()
+                .frame(width: 25, height: 25, alignment: .center)
+                .onTapGesture(perform: {
+                    if viewModel.signOut(){
+                        viewModel.goToLogin = true
+                    }
+                })
+        }
+        .padding(.horizontal, 20)
+        .frame(width: UIScreen.main.bounds.width, height: 50, alignment: .center)
+         .background(.gray)
+            NavigationLink(destination: LoginView(viewModel: AuthViewModel()).navigationBarBackButtonHidden(true), isActive: $viewModel.goToLogin) { EmptyView().navigationBarTitle("")
+                          .navigationBarHidden(true) }
+
+            
+        }
+     
     }
 }
 
 struct GoogleMapView_Previews: PreviewProvider {
     static var previews: some View {
-        GoogleMapView()
+        GoogleMapView(viewModel: AuthViewModel())
     }
 }
 
@@ -58,16 +88,16 @@ class GoogMapController: UIViewController, CLLocationManagerDelegate {
         mapView.settings.tiltGestures = true
         mapView.isIndoorEnabled = false
 
-//        if let mylocation = mapView.myLocation {
-//          print("User's location: \(mylocation)")
-//        } else {
-//          print("User's location is unknown")
-//        }
+        if let mylocation = mapView.myLocation {
+          print("User's location: \(mylocation)")
+        } else {
+          print("User's location is unknown")
+        }
 
-        marker.position = CLLocationCoordinate2D(latitude: 42.361145, longitude: -71.057083)
-        marker.title = "Boston"
-        marker.snippet = "USA"
-        marker.map = mapView
+//        marker.position = CLLocationCoordinate2D(latitude: 42.361145, longitude: -71.057083)
+//        marker.title = "Boston"
+//        marker.snippet = "USA"
+//        marker.map = mapView
 
         // Add the map to the view, hide it until we&#39;ve got a location update.
         view.addSubview(mapView)

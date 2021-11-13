@@ -88,7 +88,7 @@ struct LoginView: View {
             NavigationLink(destination: RegistrationView(viewModel: AuthViewModel()), isActive: $viewModel.isShowingRegistration) { EmptyView().navigationBarTitle("")
                           .navigationBarHidden(true) }
             
-            NavigationLink(destination: GoogleMapView(), isActive: $viewModel.isLoginSuccessFull) { EmptyView().navigationBarTitle("")
+            NavigationLink(destination: GoogleMapView(viewModel: AuthViewModel()).navigationBarBackButtonHidden(true), isActive: $viewModel.isLoginSuccessFull) { EmptyView().navigationBarTitle("")
                           .navigationBarHidden(true) }
 
         } .alert(isPresented: $viewModel.showingAlert) {
@@ -97,8 +97,10 @@ struct LoginView: View {
     }
     
     func signIn () {
+        
         viewModel.signIn(email: viewModel.email, password: viewModel.password) { (result, error) in
             if error != nil {
+                viewModel.isLoading = false
                 viewModel.showingAlert = true
             } else {
                 self.viewModel.isLoginSuccessFull = true

@@ -20,6 +20,8 @@ final class AuthViewModel: ObservableObject {
     @Published var isValidate: Bool = false
     @Published var showingAlert: Bool = false
     @Published var isShowingRegistration: Bool = false
+    @Published var goToLogin: Bool = false
+
     private var cancleable = Set<AnyCancellable>()
 
     
@@ -31,13 +33,16 @@ final class AuthViewModel: ObservableObject {
     
     func listen () {
             // monitor authentication changes using firebase
+
             handle = Auth.auth().addStateDidChangeListener { (auth, user) in
                 if let user = user {
                     // if we have a user, create a new user model
-                    print("GotUser: \(user)")
+                    
                     self.session = UserModel(
                         uid: user.uid,
-                        displayName: user.displayName, email: user.email                    )
+                        displayName: user.displayName, email: user.email)
+                    
+                    print("GotUser: \(user.displayName)")
                 } else {
                     // if we don't have a user, set our session to nil
                     self.session = nil
@@ -51,6 +56,7 @@ final class AuthViewModel: ObservableObject {
         password: String,
         handler: @escaping AuthDataResultCallback
         ) {
+            
         Auth.auth().createUser(withEmail: email, password: password, completion: handler)
     }
 
@@ -59,7 +65,9 @@ final class AuthViewModel: ObservableObject {
         password: String,
         handler: @escaping AuthDataResultCallback
         ) {
-        Auth.auth().signIn(withEmail: email, password: password, completion: handler)
+        submitLoginRequest(email: email,
+                           password: password,
+                           handler: handler)
     }
 
     func signOut () -> Bool {
@@ -73,9 +81,12 @@ final class AuthViewModel: ObservableObject {
     }
 
     
-    func submitLoginRequest() {
+    func submitLoginRequest(email: String,
+                            password: String,
+                            handler: @escaping AuthDataResultCallback) {
         if isEmailValid() && isPasswordValid(){
             isLoading = true
+            Auth.auth().signIn(withEmail: email, password: password, completion: handler)
         } else {
             isValidate.toggle()
         }

@@ -6,15 +6,20 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ContentView: View {
     
-    @ObservedObject var viewModel: AuthViewModel
     
     var body: some View {
         Group {
-            if (viewModel.session != nil) {
-                Text("Hello user!")
+           
+            if (Auth.auth().currentUser != nil) {
+                NavigationView {
+                    GoogleMapView(viewModel: AuthViewModel())
+                }
+                .navigationViewStyle(StackNavigationViewStyle())
+            
             } else {
                 NavigationView {
                     LoginView(viewModel: AuthViewModel())
@@ -22,17 +27,14 @@ struct ContentView: View {
                 .navigationViewStyle(StackNavigationViewStyle())
             }
         }
-        .onAppear(perform: getUser)
         
         
     }
-    func getUser () {
-        viewModel.listen()
-    }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(viewModel: AuthViewModel())
+        ContentView()
     }
 }

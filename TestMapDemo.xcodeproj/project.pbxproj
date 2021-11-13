@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0140E0EA273FA0E4007010F7 /* NotificationNumLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0140E0E9273FA0E3007010F7 /* NotificationNumLabel.swift */; };
 		01BEB9C4273D31F0005F6483 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9C3273D31F0005F6483 /* Tests_iOS.swift */; };
 		01BEB9C6273D31F0005F6483 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9C5273D31F0005F6483 /* Tests_iOSLaunchTests.swift */; };
 		01BEB9D0273D31F0005F6483 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9CF273D31F0005F6483 /* Tests_macOS.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0140E0E9273FA0E3007010F7 /* NotificationNumLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNumLabel.swift; sourceTree = "<group>"; };
 		01BEB9AB273D31E7005F6483 /* TestMapDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMapDemoApp.swift; sourceTree = "<group>"; };
 		01BEB9AC273D31E7005F6483 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		01BEB9AD273D31F0005F6483 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				B87522A8273DFD1E00744F44 /* SecureInputView.swift */,
+				0140E0E9273FA0E3007010F7 /* NotificationNumLabel.swift */,
 			);
 			path = SubView;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				01BEB9EF273D3D36005F6483 /* AuthViewModel.swift in Sources */,
 				B87522A9273DFD1E00744F44 /* SecureInputView.swift in Sources */,
 				01BEB9E9273D34BC005F6483 /* LoginView.swift in Sources */,
+				0140E0EA273FA0E4007010F7 /* NotificationNumLabel.swift in Sources */,
 				01BEB9D5273D31F0005F6483 /* ContentView.swift in Sources */,
 				01BEB9D3273D31F0005F6483 /* TestMapDemoApp.swift in Sources */,
 				01BEB9F4273D4341005F6483 /* OvalTextFieldStyle.swift in Sources */,
@@ -687,9 +691,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K4FG2YP6BG;
+				DEVELOPMENT_TEAM = C6TV7JWFX4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location shows to user when use";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location shows to user when use";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "MapDemo app need your location to show user";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -718,9 +725,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K4FG2YP6BG;
+				DEVELOPMENT_TEAM = C6TV7JWFX4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location shows to user when use";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location shows to user when use";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "MapDemo app need your location to show user";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -753,7 +763,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K4FG2YP6BG;
+				DEVELOPMENT_TEAM = C6TV7JWFX4;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -783,7 +793,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K4FG2YP6BG;
+				DEVELOPMENT_TEAM = C6TV7JWFX4;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
