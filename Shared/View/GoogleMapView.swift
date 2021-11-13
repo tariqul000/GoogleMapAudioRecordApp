@@ -40,9 +40,9 @@ struct GoogleMapView: View {
         .padding(.horizontal, 20)
         .frame(width: UIScreen.main.bounds.width, height: 50, alignment: .center)
          .background(.gray)
+            
             NavigationLink(destination: LoginView(viewModel: AuthViewModel()).navigationBarBackButtonHidden(true), isActive: $viewModel.goToLogin) { EmptyView().navigationBarTitle("")
                           .navigationBarHidden(true) }
-
             
         }
      
