@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0140E0EA273FA0E4007010F7 /* NotificationNumLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0140E0E9273FA0E3007010F7 /* NotificationNumLabel.swift */; };
+		01586E7D274104D200DC0F62 /* GoogMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01586E7C274104D200DC0F62 /* GoogMapController.swift */; };
+		01586E8027410AB300DC0F62 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01586E7F27410AB300DC0F62 /* AudioRecorder.swift */; };
+		01586E8227410AE700DC0F62 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01586E8127410AE700DC0F62 /* AudioPlayer.swift */; };
+		01586E8527410B6C00DC0F62 /* RecordingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01586E8427410B6C00DC0F62 /* RecordingDataModel.swift */; };
+		01586E8727410B9600DC0F62 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01586E8627410B9600DC0F62 /* Helper.swift */; };
+		01586E8927410D6000DC0F62 /* RecordingsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01586E8827410D6000DC0F62 /* RecordingsList.swift */; };
+		01A1C59E274120E7009F81AE /* RecorderDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1C59D274120E7009F81AE /* RecorderDB.swift */; };
 		01BEB9C4273D31F0005F6483 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9C3273D31F0005F6483 /* Tests_iOS.swift */; };
 		01BEB9C6273D31F0005F6483 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9C5273D31F0005F6483 /* Tests_iOSLaunchTests.swift */; };
 		01BEB9D0273D31F0005F6483 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9CF273D31F0005F6483 /* Tests_macOS.swift */; };
@@ -22,6 +29,7 @@
 		01BEB9EC273D398A005F6483 /* CustomLoadingButton in Frameworks */ = {isa = PBXBuildFile; productRef = 01BEB9EB273D398A005F6483 /* CustomLoadingButton */; };
 		01BEB9EF273D3D36005F6483 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9EE273D3D36005F6483 /* AuthViewModel.swift */; };
 		01BEB9F4273D4341005F6483 /* OvalTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9F3273D4341005F6483 /* OvalTextFieldStyle.swift */; };
+		01EAEB2D2741246400BE8321 /* RecordDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EAEB2C2741246400BE8321 /* RecordDetailsModel.swift */; };
 		B85A264C273E8AAD00CA249C /* GoogleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A264B273E8AAD00CA249C /* GoogleMapView.swift */; };
 		B85FA682273E1D9300D74F1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B85FA681273E1D9300D74F1B /* GoogleService-Info.plist */; };
 		B85FA683273E1D9300D74F1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B85FA681273E1D9300D74F1B /* GoogleService-Info.plist */; };
@@ -59,6 +67,13 @@
 
 /* Begin PBXFileReference section */
 		0140E0E9273FA0E3007010F7 /* NotificationNumLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNumLabel.swift; sourceTree = "<group>"; };
+		01586E7C274104D200DC0F62 /* GoogMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogMapController.swift; sourceTree = "<group>"; };
+		01586E7F27410AB300DC0F62 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		01586E8127410AE700DC0F62 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		01586E8427410B6C00DC0F62 /* RecordingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingDataModel.swift; sourceTree = "<group>"; };
+		01586E8627410B9600DC0F62 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		01586E8827410D6000DC0F62 /* RecordingsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsList.swift; sourceTree = "<group>"; };
+		01A1C59D274120E7009F81AE /* RecorderDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderDB.swift; sourceTree = "<group>"; };
 		01BEB9AB273D31E7005F6483 /* TestMapDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMapDemoApp.swift; sourceTree = "<group>"; };
 		01BEB9AC273D31E7005F6483 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		01BEB9AD273D31F0005F6483 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +89,7 @@
 		01BEB9E8273D34BC005F6483 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		01BEB9EE273D3D36005F6483 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		01BEB9F3273D4341005F6483 /* OvalTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalTextFieldStyle.swift; sourceTree = "<group>"; };
+		01EAEB2C2741246400BE8321 /* RecordDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailsModel.swift; sourceTree = "<group>"; };
 		0C3A1194C93DA54EF62C0FF4 /* Pods-TestMapDemo (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMapDemo (macOS).debug.xcconfig"; path = "Target Support Files/Pods-TestMapDemo (macOS)/Pods-TestMapDemo (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		1209BF0A405D4ABBB5B331D3 /* Pods_TestMapDemo__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMapDemo__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26791DF939544EA454172D55 /* Pods_TestMapDemo__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMapDemo__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +139,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01586E7E27410A8F00DC0F62 /* AudioManagers */ = {
+			isa = PBXGroup;
+			children = (
+				01586E7F27410AB300DC0F62 /* AudioRecorder.swift */,
+				01586E8127410AE700DC0F62 /* AudioPlayer.swift */,
+			);
+			path = AudioManagers;
+			sourceTree = "<group>";
+		};
+		01586E8327410B3300DC0F62 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				01586E8627410B9600DC0F62 /* Helper.swift */,
+				01A1C59D274120E7009F81AE /* RecorderDB.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		01BEB9A5273D31E5005F6483 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +173,8 @@
 		01BEB9AA273D31E6005F6483 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				01586E8327410B3300DC0F62 /* Util */,
+				01586E7E27410A8F00DC0F62 /* AudioManagers */,
 				B85FA687273E2DD600D74F1B /* Model */,
 				B87522A5273DF03700744F44 /* SubView */,
 				01BEB9F0273D3D7E005F6483 /* Extention+Modifier */,
@@ -195,6 +231,8 @@
 				01BEB9E8273D34BC005F6483 /* LoginView.swift */,
 				B87522AA273E072A00744F44 /* RegistrationView.swift */,
 				B85A264B273E8AAD00CA249C /* GoogleMapView.swift */,
+				01586E7C274104D200DC0F62 /* GoogMapController.swift */,
+				01586E8827410D6000DC0F62 /* RecordingsList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,6 +269,8 @@
 			isa = PBXGroup;
 			children = (
 				B85FA688273E2DFE00D74F1B /* UserModel.swift */,
+				01586E8427410B6C00DC0F62 /* RecordingDataModel.swift */,
+				01EAEB2C2741246400BE8321 /* RecordDetailsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -511,11 +551,19 @@
 				0140E0EA273FA0E4007010F7 /* NotificationNumLabel.swift in Sources */,
 				01BEB9D5273D31F0005F6483 /* ContentView.swift in Sources */,
 				01BEB9D3273D31F0005F6483 /* TestMapDemoApp.swift in Sources */,
+				01A1C59E274120E7009F81AE /* RecorderDB.swift in Sources */,
+				01586E8527410B6C00DC0F62 /* RecordingDataModel.swift in Sources */,
+				01586E8727410B9600DC0F62 /* Helper.swift in Sources */,
 				01BEB9F4273D4341005F6483 /* OvalTextFieldStyle.swift in Sources */,
 				B85A264C273E8AAD00CA249C /* GoogleMapView.swift in Sources */,
+				01EAEB2D2741246400BE8321 /* RecordDetailsModel.swift in Sources */,
+				01586E8027410AB300DC0F62 /* AudioRecorder.swift in Sources */,
+				01586E8927410D6000DC0F62 /* RecordingsList.swift in Sources */,
+				01586E7D274104D200DC0F62 /* GoogMapController.swift in Sources */,
 				B87522A4273DE9A200744F44 /* CustomExtention.swift in Sources */,
 				B85FA689273E2DFE00D74F1B /* UserModel.swift in Sources */,
 				B87522AB273E072A00744F44 /* RegistrationView.swift in Sources */,
+				01586E8227410AE700DC0F62 /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,6 +745,7 @@
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location shows to user when use";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location shows to user when use";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "MapDemo app need your location to show user";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone to conduct recording sessions.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -731,6 +780,7 @@
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location shows to user when use";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location shows to user when use";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "MapDemo app need your location to show user";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone to conduct recording sessions.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -88,7 +88,7 @@ struct LoginView: View {
             NavigationLink(destination: RegistrationView(viewModel: AuthViewModel()), isActive: $viewModel.isShowingRegistration) { EmptyView().navigationBarTitle("")
                           .navigationBarHidden(true) }
             
-            NavigationLink(destination: GoogleMapView(viewModel: AuthViewModel()).navigationBarBackButtonHidden(true), isActive: $viewModel.isLoginSuccessFull) { EmptyView().navigationBarTitle("")
+            NavigationLink(destination: GoogleMapView(viewModel: AuthViewModel(), audioRecorder: AudioRecorder()).navigationBarBackButtonHidden(true), isActive: $viewModel.isLoginSuccessFull) { EmptyView().navigationBarTitle("")
                           .navigationBarHidden(true) }
 
         } .alert(isPresented: $viewModel.showingAlert) {

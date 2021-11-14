@@ -15,8 +15,6 @@ target 'TestMapDemo (iOS)' do
   pod 'GoogleMaps', '5.2.0'
   pod 'GooglePlaces'
 
-
-
 end
 
 target 'TestMapDemo (macOS)' do

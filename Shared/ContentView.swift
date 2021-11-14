@@ -16,7 +16,7 @@ struct ContentView: View {
            
             if (Auth.auth().currentUser != nil) {
                 NavigationView {
-                    GoogleMapView(viewModel: AuthViewModel())
+                    GoogleMapView(viewModel: AuthViewModel(), audioRecorder: AudioRecorder())
                 }
                 .navigationViewStyle(StackNavigationViewStyle())
             
