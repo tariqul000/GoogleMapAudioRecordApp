@@ -20,8 +20,7 @@ struct LoginView: View {
         strokeColor: .orange,
         progressType: ProgressType.circleProgress)
     
-   
-
+ 
     var body: some View {
         contentBody()
     }
@@ -102,13 +101,24 @@ struct LoginView: View {
             if error != nil {
                 viewModel.isLoading = false
                 viewModel.showingAlert = true
+//
             } else {
                 self.viewModel.isLoginSuccessFull = true
                 self.viewModel.email = ""
                 self.viewModel.password = ""
                 
+              
+                // dummu code for testing
+                let record = RecordDetailsModel(fileURL: URL(fileURLWithPath: ""), createdAt: "", title: "", latitude: "", longitude: "")
+                var recordedList : [RecordDetailsModel] = []
+                recordedList.append(record)
+                RecorderDB.save(value: recordedList)
+                NotificationHelper.enableNotification()
+            
             }
         }
     }
     
+    
+
 }

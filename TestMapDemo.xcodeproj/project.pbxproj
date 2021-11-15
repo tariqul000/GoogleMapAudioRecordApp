@@ -14,6 +14,7 @@
 		01586E8527410B6C00DC0F62 /* RecordingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01586E8427410B6C00DC0F62 /* RecordingDataModel.swift */; };
 		01586E8727410B9600DC0F62 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01586E8627410B9600DC0F62 /* Helper.swift */; };
 		01586E8927410D6000DC0F62 /* RecordingsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01586E8827410D6000DC0F62 /* RecordingsList.swift */; };
+		018B6E462742406900F4097E /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018B6E452742406900F4097E /* NotificationHelper.swift */; };
 		01A1C59E274120E7009F81AE /* RecorderDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1C59D274120E7009F81AE /* RecorderDB.swift */; };
 		01BEB9C4273D31F0005F6483 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9C3273D31F0005F6483 /* Tests_iOS.swift */; };
 		01BEB9C6273D31F0005F6483 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9C5273D31F0005F6483 /* Tests_iOSLaunchTests.swift */; };
@@ -73,6 +74,7 @@
 		01586E8427410B6C00DC0F62 /* RecordingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingDataModel.swift; sourceTree = "<group>"; };
 		01586E8627410B9600DC0F62 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		01586E8827410D6000DC0F62 /* RecordingsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsList.swift; sourceTree = "<group>"; };
+		018B6E452742406900F4097E /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		01A1C59D274120E7009F81AE /* RecorderDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderDB.swift; sourceTree = "<group>"; };
 		01BEB9AB273D31E7005F6483 /* TestMapDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMapDemoApp.swift; sourceTree = "<group>"; };
 		01BEB9AC273D31E7005F6483 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				01586E8627410B9600DC0F62 /* Helper.swift */,
 				01A1C59D274120E7009F81AE /* RecorderDB.swift */,
+				018B6E452742406900F4097E /* NotificationHelper.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				0140E0EA273FA0E4007010F7 /* NotificationNumLabel.swift in Sources */,
 				01BEB9D5273D31F0005F6483 /* ContentView.swift in Sources */,
 				01BEB9D3273D31F0005F6483 /* TestMapDemoApp.swift in Sources */,
+				018B6E462742406900F4097E /* NotificationHelper.swift in Sources */,
 				01A1C59E274120E7009F81AE /* RecorderDB.swift in Sources */,
 				01586E8527410B6C00DC0F62 /* RecordingDataModel.swift in Sources */,
 				01586E8727410B9600DC0F62 /* Helper.swift in Sources */,

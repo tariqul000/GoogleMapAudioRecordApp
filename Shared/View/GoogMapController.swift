@@ -18,9 +18,19 @@ class GoogMapController: UIViewController, CLLocationManagerDelegate, GMSMapView
     var mapViewFinal: GMSMapView!
     let defaultLocation = CLLocation(latitude: 42.361145, longitude: -71.057083)
     var zoomLevel: Float = 15.0
-    //let marker : GMSMarker = GMSMarker()
+
+
+    @Binding var isClicked : Bool
+    init(isClicked: Binding<Bool>) {
+            _isClicked = isClicked
+            super.init(nibName: nil, bundle: nil)
+    }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -106,6 +116,9 @@ class GoogMapController: UIViewController, CLLocationManagerDelegate, GMSMapView
         
         if marker.title == "Me"{
             print("handle specific marker")
+            self.isClicked.toggle()
+
+            
         }
         return true
     }
@@ -117,11 +130,18 @@ class GoogMapController: UIViewController, CLLocationManagerDelegate, GMSMapView
     }
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-        
+
+        NotificationHelper.lat = String(coordinate.latitude)
+        NotificationHelper.long = String(coordinate.longitude)
+
         mapViewFinal.clear()
         let marker = GMSMarker(position: coordinate)
+        marker.title = "Me"
         marker.map = mapViewFinal
-        print(coordinate)
+        
+     
+
+       // print()
         
         print("tap working")
     }
@@ -131,8 +151,11 @@ class GoogMapController: UIViewController, CLLocationManagerDelegate, GMSMapView
 
 
 struct GoogMapControllerRepresentable: UIViewControllerRepresentable {
+    
+    @Binding var isClicked: Bool
+
     func makeUIViewController(context: UIViewControllerRepresentableContext<GoogMapControllerRepresentable>) -> GoogMapController {
-        return GoogMapController()
+        return GoogMapController(isClicked: $isClicked)
     }
     
     func updateUIViewController(_ uiViewController: GoogMapController, context: UIViewControllerRepresentableContext<GoogMapControllerRepresentable>) {

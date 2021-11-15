@@ -99,7 +99,8 @@ struct RegistrationView: View {
             Spacer()
 
             HStack{
-                Text("Already have an account?")                .foregroundColor(Color("text_color_1"))
+                Text("Already have an account?")
+                    .foregroundColor(Color("text_color_1"))
                     .titleStyle(fontSize: 14)
                 Text("LogIn")
                     .foregroundColor(.orange)

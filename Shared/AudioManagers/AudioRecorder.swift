@@ -29,7 +29,7 @@ class AudioRecorder: NSObject,ObservableObject {
         }
     }
     
-    func startRecording(title: String) {
+    func startRecording(title: String, audioFileName: String, lat: String, lang: String) {
         let recordingSession = AVAudioSession.sharedInstance()
         
         do {
@@ -38,9 +38,11 @@ class AudioRecorder: NSObject,ObservableObject {
         } catch {
             print("Failed to set up recording session")
         }
-        
+       // let fileManager = FileManager.default
         let documentPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let audioFilename = documentPath.appendingPathComponent("\(Date().toString(dateFormat: "dd-MM-YY_'at'_HH:mm:ss")).m4a")
+        //let directoryContents = try! fileManager.contentsOfDirectory(at: documentPath, includingPropertiesForKeys: nil)
+
+        let audioFilename = documentPath.appendingPathComponent("\(audioFileName).m4a")
         
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
@@ -53,15 +55,26 @@ class AudioRecorder: NSObject,ObservableObject {
             audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
             audioRecorder.record()
             recording = true
+            
+            saveAudio(documentPath: audioFilename, audioFilename: audioFileName, title: title, lat: lat, lang: lang)
+
         } catch {
             print("Could not start recording")
         }
     }
     
-    func stopRecording() {
+    func saveAudio(documentPath: URL, audioFilename: String, title : String, lat: String, lang: String){
+        print("calling \(lat), \(lang)")
+        let record = RecordDetailsModel(fileURL: documentPath, createdAt: audioFilename, title: title, latitude: lat, longitude: lang)
+        print(record)
+        var recordedList = RecorderDB.getRecordDetials()
+        recordedList?.append(record)
+        RecorderDB.save(value: recordedList ?? [])
+    }
+    func stopRecording(title: String, audioFileName: String) {
         audioRecorder.stop()
         recording = false
-        
+        RecorderDB.editRecordDetials(createAt: audioFileName, title: title, list: RecorderDB.getRecordDetials() ?? [])
         fetchRecordings()
     }
     
@@ -87,7 +100,8 @@ class AudioRecorder: NSObject,ObservableObject {
         for url in urlsToDelete {
             print(url)
             do {
-               try FileManager.default.removeItem(at: url)
+                try FileManager.default.removeItem(at: url)
+                
             } catch {
                 print("File could not be deleted!")
             }
