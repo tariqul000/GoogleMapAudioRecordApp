@@ -27,11 +27,11 @@ struct GoogleMapView: View {
     @State var clickMarker: Bool = false
     @ObservedObject var audioPlayer = AudioPlayer()
     var body: some View {
+        
         ZStack(alignment: .bottom){
+            
             GoogMapControllerRepresentable(isClicked: $clickMarker)
                 .edgesIgnoringSafeArea(.all)
-            
-            
             
             VStack(alignment: .center){
                 if audioRecorder.recording == false {
@@ -62,8 +62,6 @@ struct GoogleMapView: View {
                             .background(.gray)
                     }
                 }
-                
-                
                 
                 if !clickMarker{
                     withAnimation {
@@ -99,8 +97,8 @@ struct GoogleMapView: View {
             
             Button(action: {
                 self.audioRecorder.stopRecording(title: title, audioFileName: audioFileName)
-                
                 labelNumber = 1
+                NotificationHelper.setNotification()
                 
             }) {
                 Image(systemName: "stop.fill")
@@ -123,7 +121,7 @@ struct GoogleMapView: View {
                 .frame(width: 25, height: 25, alignment: .center)
                 .onTapGesture(perform: {
                     goTorecordingList = true
-                    NotificationHelper.setNotification()
+                 
                 })
             Spacer()
             if labelNumber == 0 {
