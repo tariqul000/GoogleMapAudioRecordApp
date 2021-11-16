@@ -31,6 +31,8 @@
 		01BEB9EF273D3D36005F6483 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9EE273D3D36005F6483 /* AuthViewModel.swift */; };
 		01BEB9F4273D4341005F6483 /* OvalTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEB9F3273D4341005F6483 /* OvalTextFieldStyle.swift */; };
 		01EAEB2D2741246400BE8321 /* RecordDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EAEB2C2741246400BE8321 /* RecordDetailsModel.swift */; };
+		01FA74FB274371AE000833AA /* mapview.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 01FA74F9274371AD000833AA /* mapview.jpeg */; };
+		01FA74FC274371AE000833AA /* recordaudio.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 01FA74FA274371AE000833AA /* recordaudio.jpeg */; };
 		B85A264C273E8AAD00CA249C /* GoogleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A264B273E8AAD00CA249C /* GoogleMapView.swift */; };
 		B85FA682273E1D9300D74F1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B85FA681273E1D9300D74F1B /* GoogleService-Info.plist */; };
 		B85FA683273E1D9300D74F1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B85FA681273E1D9300D74F1B /* GoogleService-Info.plist */; };
@@ -92,6 +94,8 @@
 		01BEB9EE273D3D36005F6483 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		01BEB9F3273D4341005F6483 /* OvalTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalTextFieldStyle.swift; sourceTree = "<group>"; };
 		01EAEB2C2741246400BE8321 /* RecordDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailsModel.swift; sourceTree = "<group>"; };
+		01FA74F9274371AD000833AA /* mapview.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mapview.jpeg; sourceTree = "<group>"; };
+		01FA74FA274371AE000833AA /* recordaudio.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recordaudio.jpeg; sourceTree = "<group>"; };
 		0C3A1194C93DA54EF62C0FF4 /* Pods-TestMapDemo (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMapDemo (macOS).debug.xcconfig"; path = "Target Support Files/Pods-TestMapDemo (macOS)/Pods-TestMapDemo (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		1209BF0A405D4ABBB5B331D3 /* Pods_TestMapDemo__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMapDemo__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26791DF939544EA454172D55 /* Pods_TestMapDemo__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMapDemo__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +167,7 @@
 		01BEB9A5273D31E5005F6483 = {
 			isa = PBXGroup;
 			children = (
+				01FA74F827437174000833AA /* preview */,
 				01BEB9AA273D31E6005F6483 /* Shared */,
 				01BEB9B9273D31F0005F6483 /* macOS */,
 				01BEB9C2273D31F0005F6483 /* Tests iOS */,
@@ -255,6 +260,15 @@
 				B87522A3273DE9A200744F44 /* CustomExtention.swift */,
 			);
 			path = "Extention+Modifier";
+			sourceTree = "<group>";
+		};
+		01FA74F827437174000833AA /* preview */ = {
+			isa = PBXGroup;
+			children = (
+				01FA74F9274371AD000833AA /* mapview.jpeg */,
+				01FA74FA274371AE000833AA /* recordaudio.jpeg */,
+			);
+			path = preview;
 			sourceTree = "<group>";
 		};
 		0C74BE74074369C15BF5D84D /* Pods */ = {
@@ -433,7 +447,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				01BEB9D7273D31F0005F6483 /* Assets.xcassets in Resources */,
+				01FA74FC274371AE000833AA /* recordaudio.jpeg in Resources */,
 				B85FA682273E1D9300D74F1B /* GoogleService-Info.plist in Resources */,
+				01FA74FB274371AE000833AA /* mapview.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

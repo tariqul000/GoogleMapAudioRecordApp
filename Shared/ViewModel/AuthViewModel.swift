@@ -42,7 +42,7 @@ final class AuthViewModel: ObservableObject {
                         uid: user.uid,
                         displayName: user.displayName, email: user.email)
                     
-                    print("GotUser: \(user.displayName)")
+                   // print("GotUser: \(user.displayName)")
                 } else {
                     // if we don't have a user, set our session to nil
                     self.session = nil
