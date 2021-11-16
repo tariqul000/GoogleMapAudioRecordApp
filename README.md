@@ -21,7 +21,14 @@ Login             |  Registration   |  Map View             |  Map View Recordin
   - Google Places - Track Places
 
 
-## Architecture
+  
+# Loading Button Freamework 
+🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+
+[CustomLoadingButton](https://github.com/tariqul000/CustomLoadingButton) - Use for animation when your loging button press. This is a open source library that develop by me 
+
+
+# Architecture
 - MVVM Architecture (View - ViewModel - Model)
 
 
