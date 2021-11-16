@@ -33,6 +33,8 @@
 		01EAEB2D2741246400BE8321 /* RecordDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EAEB2C2741246400BE8321 /* RecordDetailsModel.swift */; };
 		01FA74FB274371AE000833AA /* mapview.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 01FA74F9274371AD000833AA /* mapview.jpeg */; };
 		01FA74FC274371AE000833AA /* recordaudio.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 01FA74FA274371AE000833AA /* recordaudio.jpeg */; };
+		01FA74FF274374B6000833AA /* registration.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 01FA74FD274374B5000833AA /* registration.jpeg */; };
+		01FA7500274374B6000833AA /* login.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 01FA74FE274374B6000833AA /* login.jpeg */; };
 		B85A264C273E8AAD00CA249C /* GoogleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A264B273E8AAD00CA249C /* GoogleMapView.swift */; };
 		B85FA682273E1D9300D74F1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B85FA681273E1D9300D74F1B /* GoogleService-Info.plist */; };
 		B85FA683273E1D9300D74F1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B85FA681273E1D9300D74F1B /* GoogleService-Info.plist */; };
@@ -96,6 +98,8 @@
 		01EAEB2C2741246400BE8321 /* RecordDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailsModel.swift; sourceTree = "<group>"; };
 		01FA74F9274371AD000833AA /* mapview.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mapview.jpeg; sourceTree = "<group>"; };
 		01FA74FA274371AE000833AA /* recordaudio.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recordaudio.jpeg; sourceTree = "<group>"; };
+		01FA74FD274374B5000833AA /* registration.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = registration.jpeg; sourceTree = "<group>"; };
+		01FA74FE274374B6000833AA /* login.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login.jpeg; sourceTree = "<group>"; };
 		0C3A1194C93DA54EF62C0FF4 /* Pods-TestMapDemo (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMapDemo (macOS).debug.xcconfig"; path = "Target Support Files/Pods-TestMapDemo (macOS)/Pods-TestMapDemo (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		1209BF0A405D4ABBB5B331D3 /* Pods_TestMapDemo__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMapDemo__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26791DF939544EA454172D55 /* Pods_TestMapDemo__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMapDemo__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,6 +269,8 @@
 		01FA74F827437174000833AA /* preview */ = {
 			isa = PBXGroup;
 			children = (
+				01FA74FE274374B6000833AA /* login.jpeg */,
+				01FA74FD274374B5000833AA /* registration.jpeg */,
 				01FA74F9274371AD000833AA /* mapview.jpeg */,
 				01FA74FA274371AE000833AA /* recordaudio.jpeg */,
 			);
@@ -450,6 +456,8 @@
 				01FA74FC274371AE000833AA /* recordaudio.jpeg in Resources */,
 				B85FA682273E1D9300D74F1B /* GoogleService-Info.plist in Resources */,
 				01FA74FB274371AE000833AA /* mapview.jpeg in Resources */,
+				01FA74FF274374B6000833AA /* registration.jpeg in Resources */,
+				01FA7500274374B6000833AA /* login.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
